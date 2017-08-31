@@ -1,0 +1,27 @@
+# Podfile content
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.1'
+
+target 'AwesomeProject' do
+  react_native_path = "../node_modules/react-native"
+  pod "Yoga", :path => "#{react_native_path}/ReactCommon/yoga"
+  pod 'React', path: react_native_path, :subspecs => [
+     'Core',
+     'RCTActionSheet',
+     'RCTAnimation',
+     'RCTGeolocation',
+     'RCTImage',
+     'RCTLinkingIOS',
+     'RCTNetwork',
+     'RCTSettings',
+     'RCTText',
+     'RCTVibration',
+     'RCTWebSocket',
+     'DevSupport',
+     'BatchedBridge'
+  ]
+
+  pod 'GoogleMaps'
+
+end
